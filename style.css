@@ -20,7 +20,7 @@ body {
     max-width: 100vw;
     /* letter-spacing: 1px; */
     /* overflow: hidden; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .accent{
@@ -55,7 +55,37 @@ a img{
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 0.3px;
+    /* button animation content BELOW */
+    position: relative;
 }
+
+.button:before{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 13px;
+    height: 2.5px;
+    width: 0px;
+    opacity: 0;
+    background-color: red;
+    transition: .3s linear all;
+}
+
+.button:hover:before{
+    width: calc(100% - 27px);
+    opacity: 1;
+}
+
+/* button animation content ABOVE */
+
+.workBox .button img{
+    transition: .3s linear margin-left;
+}
+
+.workBox .button:hover img{
+    margin-left: 10px;
+}
+
 
 .bold{
     font-weight: bold;
@@ -89,7 +119,87 @@ nav .navList li{
     /* border: 1px solid red; */
     padding: 4px 12px;
     text-align: right;
+    /* new stuff below */
+}
 
+/* nav link animation BELOW */
+
+nav .navList li a{
+    position: relative;
+    padding: 0 3px;
+    z-index: 25;
+}
+
+nav .navList li a:before{
+    background-color: black;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    transition: 0.2s linear width;
+    z-index: -1;
+    opacity: 0;
+
+}
+
+nav .navList li a:hover:before{
+    width: 100%;
+    opacity: 1;
+}
+
+/* nav link animation ABOVE */
+
+/* .main .verticalBox .tempBox{ */
+    /* background-color: red; */
+    /* z-index: 100; */
+/* } */
+
+
+
+/* #test1{
+    position: relative;
+}
+
+#test1:before{
+    background-color: blue;
+    z-index: 8;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+} */
+
+/* #test1:before:hover {
+    
+} */
+
+/* .main .workBox{
+    position: relative;
+} */
+
+/* .main .workBox:before{
+    background-color: blue;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    top: 100%;
+} */
+
+/* .main .workBox:hover{
+    background-color: black;
+}
+
+.main .workBox img{
+} */
+
+nav .navList li a:hover{
+    color: white;
 }
 
 nav .navList a, nav .navList a:visited{
@@ -126,6 +236,10 @@ nav .socialList a, nav .socialList a:visited{
     height: 100vh;
     /* border: 1px solid red; */
     margin-top: 15px;
+}
+
+#contactTrigger br{
+    display: none;
 }
 
 .searchStatus{
@@ -187,15 +301,16 @@ nav .socialList a, nav .socialList a:visited{
     width: 50%;
     min-width: 700px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 1100px;
+    /* overflow-x: hidden; */
 }
 
 .boxLayout{
     display: grid;
     grid-template-columns: repeat(2, 330px);
     justify-content: space-between;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: inherit;
     min-width: inherit;
     margin-bottom: 60px;
@@ -218,13 +333,13 @@ nav .socialList a, nav .socialList a:visited{
     position: absolute;
     /* top: -100px; */
     min-width: 900px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     left: -330px;
     top: -240px;
 }
 
 .verticalBox:nth-of-type(1) .info{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
     bottom: 15px;
     padding: 30px;
@@ -258,7 +373,7 @@ nav .socialList a, nav .socialList a:visited{
     position: absolute;
     /* top: -100px; */
     min-width: 775px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     /* left: -330px; */
     /* top: -240px; */
     bottom: -210px;
@@ -266,7 +381,7 @@ nav .socialList a, nav .socialList a:visited{
 }
 
 .verticalBox:nth-of-type(2) .info{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
     top: 0px;
     padding: 30px;
@@ -289,7 +404,7 @@ nav .socialList a, nav .socialList a:visited{
 .horizontalBox{
     width: 100%;
     height: 300px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -329,11 +444,12 @@ nav .socialList a, nav .socialList a:visited{
 } */
 
 .main img{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .moreWork{
     position: relative;
+    z-index: 1000;
     top: 180px;
     left: 50%;
     display: inline-block;
@@ -410,13 +526,13 @@ nav .socialList a, nav .socialList a:visited{
     font-weight: 400;
     margin: 0;
     padding-top: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .about .expAndEduLayout h6{
     /* color: #969696; */
     font-size: 13px; 
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-weight: 400;
     margin-top: 0;
     padding-top: 0;
@@ -424,18 +540,18 @@ nav .socialList a, nav .socialList a:visited{
 }
 
 .about .experience, .educationAndContact{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .about .experience, .educationAndContact h4:nth-of-type(2){
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 40px;
 }
 
 .about .info .jobSeeking{
     position: relative;
     /* top: 30px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* height: fit-content; */
     /* height: 120px; */
     padding: 30px;
@@ -446,18 +562,18 @@ nav .socialList a, nav .socialList a:visited{
 }
 
 .about .jobSeeking a{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin-left: 12px;
 }
 
 .about .jobSeeking .button{
-    background-color: black;
+    /* background-color: black; */
     color: white;
 }
 
 .about .info .socialList{
     display: none;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: center;
     /* width: 100%; */
     /* left:  */
@@ -477,7 +593,7 @@ nav .socialList a, nav .socialList a:visited{
 
 @media(max-width: 1000px){
     .about{
-        background-color: blue;
+        /* background-color: blue; */
         height: fit-content;
     }
 
@@ -488,7 +604,7 @@ nav .socialList a, nav .socialList a:visited{
         margin: 0 auto;
         top: 20px;
         margin-bottom: 30px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .about .info h1, .about .info h3, .about .info h4, .about .info h5, .about .info h6, .about .info p{
@@ -499,7 +615,7 @@ nav .socialList a, nav .socialList a:visited{
         max-width: 80%;
         width: 80%;
         margin: 0 auto;
-        border: 1px solid green;
+        /* border: 1px solid green; */
     }
 
     .about .info h3{
@@ -563,18 +679,22 @@ nav .socialList a, nav .socialList a:visited{
 @media (max-width: 900px) {
 
     .about{
-        background-color: red;
+        /* background-color: red; */
+    }
+
+    .moreWork{
+        top: 50px;
     }
 
     .main{
         height: fit-content;
-        border: 1px solid green;
+        /* border: 1px solid green; */
         min-width: 330px;
     }
 
     .main .boxLayout{
         grid-template-columns: repeat(1, 1fr);
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin-bottom: 0;
         width: 100%;
     }
@@ -597,7 +717,7 @@ nav .socialList a, nav .socialList a:visited{
     .verticalBox .card2Img{
         position: absolute;
         min-width: 550px;
-        border: 2px solid green;
+        /* border: 2px solid green; */
         left: 0;
         top: 0;
         left: -109px;
@@ -618,7 +738,7 @@ nav .socialList a, nav .socialList a:visited{
     }
     
     .verticalBox:nth-of-type(2) .info{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         /* background-color: blue; */
         position: absolute;
         height: 180px;
@@ -643,7 +763,7 @@ nav .socialList a, nav .socialList a:visited{
         top: -50px;
         left: -40px;
         width: 100px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
 
     }
 
@@ -689,7 +809,7 @@ nav .socialList a, nav .socialList a:visited{
     }
 
     .about {
-        background-color: lightblue;
+        /* background-color: lightblue; */
         margin-left: 0;
         margin-right:0;
         padding-left: 0;
@@ -713,11 +833,21 @@ nav .socialList a, nav .socialList a:visited{
         padding-left: 0px;
         padding-right: 0px;
         /* text-align: center; */
+        /* border: 1px solid red; */
     }
 
     .about .info .socialList li{
         padding-left: 3px;
         padding-right: 3px;
+    }
+
+    .about .info .jobSeeking .button{
+        /* border: 1px solid red; */
+        /* margin-left: 0; */
+    }
+
+    #contactTrigger br{
+        /* display: block; */
     }
 
 

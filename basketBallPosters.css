@@ -17,7 +17,7 @@ body {
     font-size: 13px;
     width: 100%;
     height: fit-content;
-    overflow-x: none;
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
@@ -54,6 +54,24 @@ a img{
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 0.3px;
+    position: relative;
+}
+
+.button:before{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 13px;
+    height: 2.5px;
+    width: 0px;
+    opacity: 0;
+    background-color: var(--primary);
+    transition: .3s linear all;
+}
+
+.button:hover:before{
+    width: calc(100% - 27px);
+    opacity: 1;
 }
 
 .footerButton{
@@ -65,6 +83,29 @@ a img{
     font-weight: bold;
     letter-spacing: 0.4px;
     padding-left: 0;
+    position: relative;
+}
+
+.footerButton:before{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 2.5px;
+    width: 0px;
+    opacity: 0;
+    background-color:var(--primary);
+    transition: .3s linear all;
+}
+
+.footerButton:nth-of-type(1):hover:before{
+    width: calc(100% - 27px);
+    opacity: 1;
+}
+
+.footerButton:nth-of-type(2):hover:before{
+    width: calc(100% - 14px);
+    opacity: 1;
 }
 
 .bold{
@@ -110,6 +151,40 @@ nav .navList li{
 
 }
 
+/* nav link animation BELOW */
+
+nav .navList li a{
+    position: relative;
+    padding: 0 3px;
+    z-index: 25;
+}
+
+nav .navList li a:before{
+    background-color: black;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    transition: 0.2s linear width;
+    z-index: -1;
+    opacity: 0;
+
+}
+
+nav .navList li a:hover:before{
+    width: 100%;
+    opacity: 1;
+}
+
+nav .navList li a:hover{
+    color: white;
+}
+
+
+/* nav link animation ABOVE */
+
 nav .navList a, nav .navList a:visited{
     text-decoration: none;
     color: black;
@@ -140,14 +215,15 @@ nav .socialList a, nav .socialList a:visited{
 .caseStudy{
     padding-top: 200px;
     position: relative;
-    width: 100vw;
-    border: 1px solid red;
+    width: 100%;
+    /* border: 1px solid red; */
+    overflow-x: hidden;
 }
 
 .caseStudy h2:nth-of-type(1), .caseStudy p:nth-of-type(1), .caseStudy p:nth-of-type(2), .caseStudy p:nth-of-type(3), .caseStudy p:nth-of-type(4){
     max-width: 1100px;
     /* margin: 0 auto; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .caseStudy h2{
@@ -162,7 +238,7 @@ nav .socialList a, nav .socialList a:visited{
     line-height: 150%;
     margin: auto;
     margin-bottom: 60px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0 20px;
 }
 
@@ -174,21 +250,30 @@ nav .socialList a, nav .socialList a:visited{
 }
 
 .caseStudy .img1{
-    min-width: 1400px;
+    min-width: 1100px;
     /* border: 1px solid red; */
     display: block;
     margin: 0 auto;
     position: relative;
-    top: -150px;
+    /* top: -150px; */
+    margin-top: 40px;
     z-index: -1;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
+    padding: 0 20px;
+}
+
+.columnStart .singleImg{
+    display: block;
+    width: 100%;
+    /* border: 1px solid red; */
+    min-width: 100%;
 }
 
 .caseStudy .columnStart{
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    top: -300px;
+    /* top: -300px; */
     padding: 0 25px;
 }
 
@@ -210,7 +295,7 @@ p{
 .columnStart .twoBulletLayout{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding-left: 90px;
 }
 
@@ -224,7 +309,7 @@ p{
     margin-bottom: 0;
     padding-left: 17px;
     padding-top: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 16px;
 }
 
@@ -240,7 +325,7 @@ p{
     /* width: 1000px; */
     max-width: 800px;
     margin-top: 40px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
@@ -273,7 +358,7 @@ p{
 .finalUpdates{
     font-size: 16px;
     line-height: 170%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .indentLi{
@@ -283,17 +368,19 @@ p{
 footer{
     background-color: black;
     color: white;
-    position: absolute;
+    /* position: absolute; */
+    /* position: relative; */
+    top: 70px;
     width: 100%;
-    bottom: -250px;
+    /* top: -250px; */
     padding-left: calc((100% - 800px) / 2);
     padding-right: calc((100% - 800px) / 2);
     min-height: 500px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .footerContent{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     max-width: 800px;
     padding-top: 50px;
     position: relative;
@@ -306,6 +393,10 @@ footer{
 .footerContent .subHead2{
     color: var(--primary);
 }
+
+.caseStudy footer h2{
+    padding-left: 0;
+   }
 
 .footerContent h2{
     font-size: 48px;
@@ -324,16 +415,25 @@ footer{
 @media(max-width: 1400px) {
 
     .caseStudy .img1{
-        min-width: 100%;
-        width: 100%;
-        border: 1px solid purple;
+        /* min-width: 100%; */
+        /* width: 100%; */
+        /* border: 1px solid purple; */
     }
 
     .caseStudy{
         /* background-color: lightblue; */
-        background-color: rgba(40, 40, 40, 0.3);
+        /* background-color: rgba(40, 40, 40, 0.3); */
     }
 
+}
+
+@media (max-width: 1100px) {
+    .caseStudy .img1{
+        min-width: calc(100% - 40px);
+        /* max-width: 100%; */
+        /* min-width: 100%; */
+        /* width: 100%; */
+    }
 }
 
 @media(max-width: 1000px){
@@ -366,15 +466,15 @@ footer{
 @media (max-width: 1000px) {
 
     .caseStudy {
-        background-color: rgba(100, 200, 50, 0.5);
+        /* background-color: rgba(100, 200, 50, 0.5); */
     }
 
     .caseStudy .img1 {
-        top: -100px;
+        /* top: -100px; */
     }
 
     .caseStudy .columnStart {
-        top: -220px;
+        /* top: -220px; */
     }
 
     footer{
@@ -385,7 +485,7 @@ footer{
 
 @media (max-width: 770px) {
     .caseStudy{
-        background-color: rgba(200, 20, 20, 0.4)
+        /* background-color: rgba(200, 20, 20, 0.4) */
     }
 
     .columnStart .imgAndContentLayout{
@@ -423,15 +523,21 @@ footer{
 
 @media(max-width: 650px){
     .caseStudy {
-        background-color: rgba(100, 20, 200, 0.5);
+        /* background-color: rgba(100, 20, 200, 0.5); */
+    }
+
+    .columnStart .singleImg{
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
     }
 
     .caseStudy .img1{
-        top: -70px;
+        /* top: -70px; */
     }
 
     .caseStudy .columnStart{
-        top: -180px;
+        /* top: -180px; */
     }
 
     .indent1 {
@@ -453,15 +559,15 @@ footer{
 
 @media(max-width: 450px){
     .caseStudy {
-        background-color: rgba(20, 220, 200, 0.5);
+        /* background-color: rgba(20, 220, 200, 0.5); */
     }
 
     .caseStudy .img1{
-        top: -40px;
+        /* top: -40px; */
     }
 
     .caseStudy .columnStart{
-        top: -120px;
+        /* top: -120px; */
     }
 
     .twoImageLayout{
@@ -504,5 +610,9 @@ footer{
         min-height: 450px;
         padding-bottom: 30px;
         bottom: -400px;
+    }
+
+    .caseStudy footer h2{
+     padding-left: 0;
     }
 }
