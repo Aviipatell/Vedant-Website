@@ -1,0 +1,508 @@
+:root{
+    --primary: #FF0062;
+    --black: #000000;
+    --lightGrey: #F6F6F6; 
+    --primaryHover: rgb(255, 36, 120);
+}
+
+img{
+    max-width: 500px;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 13px;
+    width: 100%;
+    height: fit-content;
+    overflow-x: none;
+    box-sizing: border-box;
+}
+
+.accent{
+    color: var(--primary);
+}
+
+a img{
+    width: 10px;
+    margin-left: 4px;
+}
+
+.accentButton{
+    padding: 8px 13px;
+    background-color: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    margin-right: 13px;
+}
+
+.accentButton:hover{
+    background-color: var(--primaryHover);
+}
+
+.button{
+    padding: 8px 13px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+.footerButton{
+    padding: 8px 13px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    padding-left: 0;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.upperCase{
+    text-transform: uppercase;
+}
+
+.space{
+    letter-spacing: 1%;
+}
+
+nav {
+    
+}
+
+nav #logo {
+    position: fixed;
+    width: 22px;
+    top: 28px;
+    left: 25px;
+    /* height: 100px; */
+    z-index: 10;
+}
+
+nav .navList{
+    list-style-type: none;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 28px;
+    right: 13px;
+    z-index: 10;
+}
+
+nav .navList li{
+    display: block;
+    /* border: 1px solid red; */
+    padding: 4px 12px;
+    text-align: right;
+
+}
+
+nav .navList a, nav .navList a:visited{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}  
+
+nav .socialList{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    bottom: 28px;
+    right: 25px;
+    z-index: 10;
+}
+
+nav .socialList li{
+    display: inline-block;
+    padding: 8px 12px;
+    /* border: 1px solid red; */
+}
+
+nav .socialList a, nav .socialList a:visited{
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 14px;
+}  
+
+.caseStudy{
+    padding-top: 200px;
+    position: relative;
+    width: 100vw;
+    border: 1px solid red;
+}
+
+.caseStudy h2:nth-of-type(1), .caseStudy p:nth-of-type(1), .caseStudy p:nth-of-type(2), .caseStudy p:nth-of-type(3), .caseStudy p:nth-of-type(4){
+    max-width: 1100px;
+    /* margin: 0 auto; */
+    border: 1px solid red;
+}
+
+.caseStudy h2{
+    font-size: 48px;
+    margin: auto;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.caseStudy .intro{
+    font-size: 24px;
+    line-height: 150%;
+    margin: auto;
+    margin-bottom: 60px;
+    border: 1px solid red;
+    padding: 0 20px;
+}
+
+.caseStudy .subTitle{
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.caseStudy .img1{
+    min-width: 1400px;
+    /* border: 1px solid red; */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -150px;
+    z-index: -1;
+    border: 1px solid purple;
+}
+
+.caseStudy .columnStart{
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    top: -300px;
+    padding: 0 25px;
+}
+
+.subHead{
+    font-size: 48px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 175%;
+}
+
+.indent1 {
+    padding-left: 70px;
+}
+
+.columnStart .twoBulletLayout{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid green;
+    padding-left: 90px;
+}
+
+#physicalResearch p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#physicalResearch ul{
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-left: 17px;
+    padding-top: 0;
+    border: 1px solid red;
+    font-size: 16px;
+}
+
+.indent2 {
+    font-size: 16px;
+    line-height: 170%;
+    padding-left: 120px;
+}
+
+.twoImageLayout{
+    padding: 0;
+    margin: 0;
+    /* width: 1000px; */
+    max-width: 800px;
+    margin-top: 40px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    /* justify-content: center; */
+}
+
+.columnStart #proCon{
+    padding-left: 10px;
+}
+
+.twoImageLayout img{
+    /* max-width: 50%; */
+    justify-self: center;
+    display: block;
+}
+
+.subHead2{
+    font-size: 24px;
+    /* font-weight: 400; */
+    margin-top: 30px;
+    margin-bottom: 20px; 
+}
+
+#viewFinal, #viewFinal:visited{
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.finalUpdates{
+    font-size: 16px;
+    line-height: 170%;
+    border: 1px solid red;
+}
+
+.indentLi{
+    margin-left: 50px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: -250px;
+    padding-left: calc((100% - 800px) / 2);
+    padding-right: calc((100% - 800px) / 2);
+    min-height: 500px;
+    border: 1px solid red;
+}
+
+.footerContent{
+    border: 1px solid red;
+    max-width: 800px;
+    padding-top: 50px;
+    position: relative;
+    height: fit-content;
+    /* top: 50%; */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.footerContent .subHead2{
+    color: var(--primary);
+}
+
+.footerContent h2{
+    font-size: 48px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.footerContent .jobSeeking{
+    margin-top: 50px;
+}
+
+.footerContent .jobSeeking h3{
+    font-size: 24px;
+}
+
+@media(max-width: 1400px) {
+
+    .caseStudy .img1{
+        min-width: 100%;
+        width: 100%;
+        border: 1px solid purple;
+    }
+
+    .caseStudy{
+        /* background-color: lightblue; */
+        background-color: rgba(40, 40, 40, 0.3);
+    }
+
+}
+
+@media(max-width: 1000px){
+
+    nav {
+        /* position: absolute; */
+        height: 0;
+    }
+
+    nav .socialList{
+        display: none;
+    }
+
+    nav #logo{
+        position: relative;
+        display: inline-block;
+    }
+
+    nav .navList{
+        position: relative;
+        /* background-color: green; */
+        float: right;
+    }
+
+    nav .navList li{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .caseStudy {
+        background-color: rgba(100, 200, 50, 0.5);
+    }
+
+    .caseStudy .img1 {
+        top: -100px;
+    }
+
+    .caseStudy .columnStart {
+        top: -220px;
+    }
+
+    footer{
+        bottom: -280px;
+    }
+
+}
+
+@media (max-width: 770px) {
+    .caseStudy{
+        background-color: rgba(200, 20, 20, 0.4)
+    }
+
+    .columnStart .imgAndContentLayout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #wireFrame1{
+        display: block;
+        /* margin: 0 auto; */
+    }
+
+    .caseStudy h2, .footerContent h2, .subHead{
+        font-size: 38px;
+    }
+
+    .caseStudy .intro, .caseStudy .subTitle, .footerContent .subHead2, .footerContent .jobSeeking h3{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .twoImageLayout{
+        min-width: 100%;
+        width: 100%;
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+
+    .twoImageLayout img{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 650px){
+    .caseStudy {
+        background-color: rgba(100, 20, 200, 0.5);
+    }
+
+    .caseStudy .img1{
+        top: -70px;
+    }
+
+    .caseStudy .columnStart{
+        top: -180px;
+    }
+
+    .indent1 {
+        padding-left: 40px;
+    }
+
+    .columnStart .twoBulletLayout{
+        padding-left: 60px;
+        /* background-color :red; */
+    }
+
+    .indent2{
+        padding-left: 80px;
+    }
+    footer{
+        bottom: -320px;
+    }
+}
+
+@media(max-width: 450px){
+    .caseStudy {
+        background-color: rgba(20, 220, 200, 0.5);
+    }
+
+    .caseStudy .img1{
+        top: -40px;
+    }
+
+    .caseStudy .columnStart{
+        top: -120px;
+    }
+
+    .twoImageLayout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .twoImageLayout img{
+        width: 80%;
+    }
+
+
+    .columnStart .twoBulletLayout{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+
+    .indent1 {
+        padding-left: 25px;
+    }
+
+    .columnStart .twoBulletLayout{
+        padding-left: 40px;
+        /* background-color :red; */
+    }
+
+    .indent2{
+        padding-left: 60px;
+    }
+
+    #wireFrame1{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footerContent{
+        padding-top: 10px;
+    }
+
+    footer {
+        min-height: 450px;
+        padding-bottom: 30px;
+        bottom: -400px;
+    }
+}
