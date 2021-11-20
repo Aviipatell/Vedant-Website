@@ -2,18 +2,18 @@
 
 Created a portfolio website for a friend based on provided wireframes.
 
-# Getting Started:
+## Getting Started:
 
 Use git clone to download this project and open the index.html file on a browser of your choice.
 
-# Built With:
+## Built With:
 
 Project was built with HTML, CSS and Javascript (and jQuery) on VScode. 
 
-# Authors:
+## Authors:
 
 Avi Patel
 
-# Acknowledgments:
+## Acknowledgments:
 
 Vedant Patel - Designed the wireframes for the portfolio.
