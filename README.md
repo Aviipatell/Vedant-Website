@@ -4,7 +4,7 @@ Created a portfolio website for a friend based on provided wireframes. View live
 
 ## Getting Started:
 
-Use git clone to download this project and open the index.html file on a browser of your choice.
+Use `git clone` to download this project and open the index.html file on a browser of your choice.
 
 ## Built With:
 
