@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Created a portfolio website for a friend based on provided wireframes.
+Created a portfolio website for a friend based on provided wireframes. View live: [Portfolio Website](https://aviipatell.github.io/Vedant-Website/)
 
 ## Getting Started:
 
